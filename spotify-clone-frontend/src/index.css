@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Custom styles for the Spotify clone */
+:root {
+  --spotify-green: #1db954;
+  --spotify-black: #191414;
+  --spotify-dark-gray: #121212;
+  --spotify-gray: #282828;
+  --spotify-light-gray: #b3b3b3;
+  --spotify-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--spotify-black);
+  color: var(--spotify-white);
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--spotify-dark-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--spotify-gray);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
