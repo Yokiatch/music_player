@@ -1,28 +1,40 @@
-# Firebase build and deployment files
-/firebase-debug.log
-/firebase-debug.*.log
-.firebaserc
+# Backend Environment Files
+spotify-clone-backend/.env
+spotify-clone-backend/.env.*
 
-# Firebase Hosting
-/firebase.json
-*.cache
-hosting/.cache
+# Frontend Environment Files  
+spotify-clone-frontend/.env
+spotify-clone-frontend/.env.*
 
-# Firebase Functions
-/functions/node_modules/
-/functions/.env
-/functions/package-lock.json
+# Firebase Config (if you want to exclude it)
+spotify-clone-frontend/src/config/firebase.js
 
-# Firebase Emulators
-/firebase-*.zip
-/.firebase/
-/emulator-ui/
+# Node Modules (both projects)
+spotify-clone-backend/node_modules/
+spotify-clone-frontend/node_modules/
 
-# Logs
-*.log
+# Build Directories
+spotify-clone-backend/dist/
+spotify-clone-frontend/dist/
+spotify-clone-frontend/build/
+
+# Logs (both projects)
+spotify-clone-backend/logs/
+spotify-clone-frontend/logs/
+**/*.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 
-# Environment files (local configs)
-/.env.*
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Package lock files (optional)
+spotify-clone-backend/package-lock.json
+spotify-clone-frontend/package-lock.json
