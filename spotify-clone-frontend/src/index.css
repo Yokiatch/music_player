@@ -1,6 +1,7 @@
-@import "tailwindcss";
+@import "tailwindcss/preflight";
+@tailwind utilities;
 
-/* Custom styles for the Spotify clone */
+/* Your custom CSS below */
 :root {
   --spotify-green: #1db954;
   --spotify-black: #191414;

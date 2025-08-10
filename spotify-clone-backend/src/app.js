@@ -58,8 +58,8 @@ app.use((err, req, res, next) => {
 
 // 404 handler
 app.all('*', (req, res) => {
-  res.status(404).json({ error: 'Route not found' });
-});
+    res.status(404).json({ error: 'Route not found' });
+  });
 
 const PORT = process.env.PORT || 5000;
 
