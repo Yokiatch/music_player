@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import TopBar from './Topbar'; // Fixed: Changed from './Topbar' to './TopBar'
+import TopBar from './TopBar';
 import Home from './Home';
 import Search from './Search';
 import Library from './Library';

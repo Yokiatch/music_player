@@ -9,7 +9,6 @@ const AuthGuard = ({ children }) => {
   const { spotifyToken } = useSpotify();
   const location = useLocation();
 
-  // Show loading spinner while checking auth state
   if (authLoading) {
     return (
       <div className="h-screen bg-black flex items-center justify-center">
@@ -18,12 +17,12 @@ const AuthGuard = ({ children }) => {
     );
   }
 
-  // Redirect to login if not authenticated
-  if (!user) {
+  // Allow access if either Firebase user is authenticated OR Spotify token exists
+  if (!user && !spotifyToken) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  // If user is authenticated but no Spotify token, redirect to Spotify auth
+  // If Firebase user exists but no Spotify token, show connect prompt
   if (user && !spotifyToken) {
     return (
       <div className="h-screen bg-black flex flex-col items-center justify-center text-white">
@@ -33,7 +32,7 @@ const AuthGuard = ({ children }) => {
             To use this app, you need to connect your Spotify account.
           </p>
           <button
-            onClick={() => window.location.href = 'http://127.0.0.1:5000/auth/login'}
+            onClick={() => (window.location.href = 'http://127.0.0.1:5000/auth/login')}
             className="bg-[#1db954] text-black px-8 py-3 rounded-full font-semibold hover:bg-[#1ed760] transition-colors"
           >
             Connect Spotify
@@ -43,7 +42,6 @@ const AuthGuard = ({ children }) => {
     );
   }
 
-  // User is fully authenticated, render children
   return children;
 };
 
