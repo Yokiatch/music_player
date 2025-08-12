@@ -6,7 +6,7 @@ const {
   getUserPlaylists, 
   searchTracks, 
   getPlaylist 
-} = require('../controllers/spotifycontroller');
+} = require('../controllers/spotifyController');
 
 // Apply authentication middleware to all routes
 router.use(authenticateSpotify);
